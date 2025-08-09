@@ -121,6 +121,8 @@
       trouble.enable = true;
     };
 
+    autocomplete.nvim-cmp.enable = true;
+
     utility.surround.enable = true;
     comments.comment-nvim.enable = true;
     git.gitsigns.enable = true;
