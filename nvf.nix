@@ -70,13 +70,6 @@
       }
     ];
 
-    # Enable custom theming options
-    theme = {
-      enable = true;
-      name = "gruvbox";
-      style = "dark";
-    };
-
     statusline.lualine.enable = true;
 
     ui.noice.enable = true;
