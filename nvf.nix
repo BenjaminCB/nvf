@@ -82,7 +82,7 @@
 
     ui.borders = {
       enable = true;
-      globalStyle = "shadow";
+      globalStyle = "rounded";
       plugins.lsp-signature.enable = true;
       plugins.lspsaga.enable = true;
       plugins.nvim-cmp.enable = true;
@@ -94,25 +94,32 @@
     ui.noice.enable = true;
     visuals.nvim-web-devicons.enable = true;
 
-    formatter.conform-nvim = {
-      enable = true;
-      setupOpts.format_on_save = {
-        lsp_farmat = "fallback";
-        timeout_ms = 500;
-      };
-    };
-
     languages = {
       enableExtraDiagnostics = true;
       enableFormat = true;
-      treeSitter.enable = true;
+      enableTreesitter = true;
       nix = {
+        enable = true;
+        lsp.enable = true;
+      };
+      ts = {
+        enable = true;
+        lsp.enable = true;
+      };
+      python = {
         enable = true;
         lsp.enable = true;
       };
     };
 
-    treesitter.enable = true;
+    lsp = {
+      enable = true;
+      formatOnSave = true;
+      inlayHints.enable = true;
+      lspSignature.enable = true;
+      lspsaga.enable = true;
+      trouble.enable = true;
+    };
 
     utility.surround.enable = true;
     comments.comment-nvim.enable = true;
