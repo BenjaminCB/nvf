@@ -1,5 +1,4 @@
-{ pkgs, ... }: 
-{
+{pkgs, ...}: {
   config.vim = {
     globals.mapleader = " ";
     lineNumberMode = "relNumber";
@@ -34,13 +33,13 @@
     autocmds = [
       {
         command = "setlocal wrap colorcolumn=0 spell spelllang=da,en_gb";
-        event = [ "BufEnter" "BufWinEnter" ];
-        pattern = [ "*.md" ];
+        event = ["BufEnter" "BufWinEnter"];
+        pattern = ["*.md"];
       }
       {
         command = "nnoremap <buffer> <leader>sc [slz=";
-        event = [ "BufEnter" "BufWinEnter" ];
-        pattern = [ "*.md" ];
+        event = ["BufEnter" "BufWinEnter"];
+        pattern = ["*.md"];
       }
     ];
 
@@ -80,7 +79,30 @@
     };
 
     statusline.lualine.enable = true;
-    treesitter.enable = true;
+
+    formatter.conform-nvim = {
+      enable = true;
+      setupOpts.format_on_save = {
+        lsp_farmat = "fallback";
+        timeout_ms = 500;
+      };
+    };
+
+    languages = {
+      enableExtraDiagnostics = true;
+      enableFormat = true;
+      nix = {
+        enable = true;
+        lsp.enable = true;
+        treesitter.enable = true;
+      };
+    };
+
+    treesitter = {
+      enable = true;
+      context.enable = true;
+    };
+
     utility.surround.enable = true;
     comments.comment-nvim.enable = true;
     git.gitsigns.enable = true;
@@ -89,7 +111,7 @@
       setupOpts = {
         default_file_explorer = true;
         view_options.show_hidden = true;
-        columns = [ "icon" ];
+        columns = ["icon"];
       };
     };
 
