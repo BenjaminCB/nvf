@@ -93,6 +93,14 @@
       };
     };
 
-    telescope.enable = true;
+    telescope = {
+      enable = true;
+      mappings = {
+        liveGrep = "<leader>ps";
+        treesitter = "<leader>pt";
+        findFiles = "<leader>pf";
+        buffers = "<leader>pb";
+      };
+    };
   };
 }
