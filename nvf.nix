@@ -9,7 +9,6 @@
       shiftwidth = 4;
       tabstop = 4;
       expandtab = true;
-      smartindent = true;
       splitright = true;
       splitbelow = true;
       softtabstop = 4;
@@ -80,13 +79,6 @@
 
     statusline.lualine.enable = true;
 
-    ui.borders = {
-      enable = false;
-      globalStyle = "rounded";
-      plugins.lsp-signature.enable = false;
-      plugins.lspsaga.enable = false;
-      plugins.nvim-cmp.enable = false;
-    };
     ui.noice.enable = true;
     visuals.nvim-web-devicons.enable = true;
 
@@ -112,12 +104,22 @@
       enable = true;
       formatOnSave = true;
       inlayHints.enable = true;
-      lspSignature.enable = true;
       lspsaga.enable = true;
       trouble.enable = true;
     };
 
-    autocomplete.nvim-cmp.enable = true;
+    autocomplete.blink-cmp = {
+      enable = true;
+      setupOpts.signature.enable = true;
+      mappings = {
+        complete = "<C-CR>";
+        confirm = "<C-Space>";
+        next = "<C-j>";
+        previous = "<C-k>";
+        scrollDocsDown = "<C-l>";
+        scrollDocsUp = "<C-h>";
+      };
+    };
 
     utility.surround.enable = true;
     comments.comment-nvim.enable = true;
