@@ -121,6 +121,11 @@
       };
     };
 
+    treesitter = {
+      enable = true;
+      indent.enable = true;
+    };
+
     utility.surround.enable = true;
     comments.comment-nvim.enable = true;
     git.gitsigns.enable = true;
