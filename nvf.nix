@@ -79,8 +79,20 @@
       style = "dark";
     };
 
-    treesitter.enable = true;
-    telescope.enable = true;
     statusline.lualine.enable = true;
+    treesitter.enable = true;
+    utility.surround.enable = true;
+    comments.comment-nvim.enable = true;
+    git.gitsigns.enable = true;
+    utility.oil-nvim = {
+      enable = true;
+      setupOpts = {
+        default_file_explorer = true;
+        view_options.show_hidden = true;
+        columns = [ "icon" ];
+      };
+    };
+
+    telescope.enable = true;
   };
 }
