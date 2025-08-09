@@ -44,6 +44,34 @@
       }
     ];
 
+    keymaps = [
+      {
+        action = "<cmd>cnext<cr>";
+        key = "<leader>cn";
+        mode = "n";
+      }
+      {
+        action = "<cmd>cprev><cr>";
+        key = "<leader>cp";
+        mode = "n";
+      }
+      {
+        action = "<cmd>copen<cr>";
+        key = "<leader>co";
+        mode = "n";
+      }
+      {
+        action = "<cmd>cclose<cr>";
+        key = "<leader>cc";
+        mode = "n";
+      }
+      {
+        action = ":call setqflist([])<cr>";
+        key = "<leader>cf";
+        mode = "n";
+      }
+    ];
+
     # Enable custom theming options
     theme = {
       enable = true;
