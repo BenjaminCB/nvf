@@ -80,6 +80,20 @@
 
     statusline.lualine.enable = true;
 
+    ui.borders = {
+      enable = true;
+      globalStyle = "shadow";
+      plugins.lsp-signature.enable = true;
+      plugins.lspsaga.enable = true;
+      plugins.nvim-cmp.enable = true;
+    };
+    ui.breadcrumbs = {
+      enable = true;
+      lualine.winbar.enable = true;
+    };
+    ui.noice.enable = true;
+    visuals.nvim-web-devicons.enable = true;
+
     formatter.conform-nvim = {
       enable = true;
       setupOpts.format_on_save = {
@@ -91,17 +105,14 @@
     languages = {
       enableExtraDiagnostics = true;
       enableFormat = true;
+      treeSitter.enable = true;
       nix = {
         enable = true;
         lsp.enable = true;
-        treesitter.enable = true;
       };
     };
 
-    treesitter = {
-      enable = true;
-      context.enable = true;
-    };
+    treesitter.enable = true;
 
     utility.surround.enable = true;
     comments.comment-nvim.enable = true;
