@@ -70,6 +70,11 @@
       }
     ];
 
+    theme = {
+      enable = true;
+      base16-colors = import ./base16.nix;
+    };
+
     statusline.lualine.enable = true;
 
     ui.noice.enable = true;
