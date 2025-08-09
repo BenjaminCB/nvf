@@ -14,20 +14,7 @@
         (inputs.nvf.lib.neovimConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           modules = [
-            {
-              config.vim = {
-                # Enable custom theming options
-                theme = {
-		  enable = true;
-		  name = "gruvbox";
-		  style = "dark";
-		};
-
-                treesitter.enable = true;
-		telescope.enable = true;
-		statusline.lualine.enable = true;
-              };
-            }
+            ./nvf.nix
           ];
         })
         .neovim;
