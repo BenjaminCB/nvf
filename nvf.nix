@@ -31,6 +31,19 @@
       cmdheight = 2;
     };
 
+    autocmds = [
+      {
+        command = "setlocal wrap colorcolumn=0 spell spelllang=da,en_gb";
+        event = [ "BufEnter" "BufWinEnter" ];
+        pattern = [ "*.md" ];
+      }
+      {
+        command = "nnoremap <buffer> <leader>sc [slz=";
+        event = [ "BufEnter" "BufWinEnter" ];
+        pattern = [ "*.md" ];
+      }
+    ];
+
     # Enable custom theming options
     theme = {
       enable = true;
