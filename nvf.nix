@@ -81,15 +81,11 @@
     statusline.lualine.enable = true;
 
     ui.borders = {
-      enable = true;
+      enable = false;
       globalStyle = "rounded";
-      plugins.lsp-signature.enable = true;
-      plugins.lspsaga.enable = true;
-      plugins.nvim-cmp.enable = true;
-    };
-    ui.breadcrumbs = {
-      enable = true;
-      lualine.winbar.enable = true;
+      plugins.lsp-signature.enable = false;
+      plugins.lspsaga.enable = false;
+      plugins.nvim-cmp.enable = false;
     };
     ui.noice.enable = true;
     visuals.nvim-web-devicons.enable = true;
