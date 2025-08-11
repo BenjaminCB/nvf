@@ -90,6 +90,7 @@
       };
       ts = {
         enable = true;
+        format.enable = false;
         lsp.enable = true;
       };
       python = {
