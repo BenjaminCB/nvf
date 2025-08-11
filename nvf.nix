@@ -103,7 +103,10 @@
       enable = true;
       formatOnSave = true;
       inlayHints.enable = true;
-      lspsaga.enable = true;
+      lspsaga = {
+        enable = true;
+        setupOpts.lightbulb.enable = false;
+      };
       trouble.enable = true;
     };
 
