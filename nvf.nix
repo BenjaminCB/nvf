@@ -149,5 +149,12 @@
         buffers = "<leader>pb";
       };
     };
+
+    assistant = {
+      copilot.enable = true;
+      codecompanion-nvim = {
+        enable = true;
+      };
+    };
   };
 }
