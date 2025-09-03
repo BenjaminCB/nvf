@@ -97,6 +97,13 @@
         enable = true;
         lsp.enable = true;
       };
+      markdown = {
+        enable = true;
+        lsp.enable = true;
+        extensions.render-markdown-nvim.enable = true;
+      };
+      yaml.enable = true;
+      html.enable = true;
     };
 
     lsp = {
