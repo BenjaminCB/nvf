@@ -104,6 +104,11 @@
       };
       yaml.enable = true;
       html.enable = true;
+      typst = {
+        enable = true;
+        extensions.typst-preview-nvim.enable = true;
+        lsp.enable = true;
+      };
     };
 
     lsp = {
