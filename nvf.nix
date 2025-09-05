@@ -140,15 +140,7 @@
       indent.enable = true;
     };
 
-    utility = {
-      surround.enable = true;
-      images.image-nvim = {
-        enable = true;
-        setupOpts.backend = "kitty";
-        setupOpts.integrations.markdown.onlyRenderAtCursor = true;
-        setupOpts.integrations.markdown.clearInInsertMode = true;
-      };
-    };
+    utility.surround.enable = true;
     comments.comment-nvim.enable = true;
     git.gitsigns.enable = true;
     utility.oil-nvim = {
