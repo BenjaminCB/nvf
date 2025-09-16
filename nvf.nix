@@ -108,6 +108,7 @@
         enable = true;
         extensions.typst-preview-nvim.enable = true;
         lsp.enable = true;
+        format.type = "typstyle";
       };
     };
 
