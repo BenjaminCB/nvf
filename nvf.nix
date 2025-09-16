@@ -115,7 +115,7 @@
     lsp = {
       enable = true;
       formatOnSave = true;
-      inlayHints.enable = true;
+      inlayHints.enable = false;
       lspsaga = {
         enable = true;
         setupOpts.lightbulb.enable = false;
