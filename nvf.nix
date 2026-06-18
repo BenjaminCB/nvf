@@ -88,7 +88,7 @@
         enable = true;
         lsp.enable = true;
       };
-      ts = {
+      typescript = {
         enable = true;
         format.enable = false;
         lsp.enable = true;
@@ -108,7 +108,7 @@
         enable = true;
         extensions.typst-preview-nvim.enable = true;
         lsp.enable = true;
-        format.type = "typstyle";
+        format.type = ["typstyle"];
       };
     };
 
