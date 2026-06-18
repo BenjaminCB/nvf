@@ -132,7 +132,8 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "nvf": "nvf"
+        "nvf": "nvf",
+        "texpresso-vim": "texpresso-vim"
       }
     },
     "systems": {
@@ -147,6 +148,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "texpresso-vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1774834501,
+        "narHash": "sha256-ZLPxy1JNTfjLerSVDJAxmqqQUWhm+SuVdDUcjRH8lEU=",
+        "owner": "let-def",
+        "repo": "texpresso.vim",
+        "rev": "5630dca6090787c446e72886812a1b6a5716c2fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "let-def",
+        "repo": "texpresso.vim",
         "type": "github"
       }
     }

@@ -1,4 +1,14 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  texpresso-vim,
+  ...
+}: let
+  texpressoVimPlugin = pkgs.vimUtils.buildVimPlugin {
+    pname = "texpresso.vim";
+    version = "unstable";
+    src = texpresso-vim;
+  };
+in {
   config.vim = {
     globals.mapleader = " ";
     lineNumberMode = "relNumber";
@@ -49,7 +59,7 @@
         mode = "n";
       }
       {
-        action = "<cmd>cprev><cr>";
+        action = "<cmd>cprev<cr>";
         key = "<leader>cp";
         mode = "n";
       }
@@ -167,6 +177,17 @@
       copilot.enable = true;
       codecompanion-nvim = {
         enable = true;
+      };
+    };
+
+    extraPlugins = {
+      texpresso = {
+        package = texpressoVimPlugin;
+
+        # Optional, only needed if `texpresso` is not otherwise in PATH.
+        setup = ''
+          require("texpresso").texpresso_path = "${pkgs.texpresso}/bin/texpresso"
+        '';
       };
     };
   };
