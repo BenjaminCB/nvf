@@ -120,6 +120,11 @@ in {
         lsp.enable = true;
         format.type = ["typstyle"];
       };
+      tex = {
+        enable = true;
+        lsp.enable = true;
+        treesitter.enable = true;
+      };
     };
 
     lsp = {
