@@ -39,6 +39,8 @@ in {
       cmdheight = 2;
     };
 
+    clipboard.providers.wl-copy.enable = true;
+
     autocmds = [
       {
         command = "setlocal wrap colorcolumn=0 spell spelllang=da,en_gb";
