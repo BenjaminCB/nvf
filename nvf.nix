@@ -8,6 +8,15 @@
     version = "unstable";
     src = texpresso-vim;
   };
+
+  splitNvimPlugin = pkgs.vimUtils.buildVimPlugin {
+    pname = "split.nvim";
+    version = "unstable-2025-02-07";
+    src = builtins.fetchGit {
+      url = "https://github.com/wurli/split.nvim.git";
+      rev = "12c4fb27a9c617e0291ef0ae1609662ae409c9f8";
+    };
+  };
 in {
   config.vim = {
     globals.mapleader = " ";
@@ -194,6 +203,33 @@ in {
         # Optional, only needed if `texpresso` is not otherwise in PATH.
         setup = ''
           require("texpresso").texpresso_path = "${pkgs.texpresso}/bin/texpresso"
+        '';
+      };
+
+      split = {
+        package = splitNvimPlugin;
+        setup = ''
+          require("split").setup({
+            set_default_mappings = false,
+            keymaps = {
+              -- Sentence-split the current line.
+              ["<leader>ss"] = {
+                pattern = "[%.?!]%s+",
+                unsplitter = " ",
+                smart_ignore = "code",
+                quote_characters = {},
+                brace_characters = {},
+                operator_pending = false,
+                interactive = false,
+              },
+
+              -- Interactive splitting for the current line.
+              ["<leader>si"] = {
+                operator_pending = false,
+                interactive = true,
+              },
+            },
+          })
         '';
       };
     };
