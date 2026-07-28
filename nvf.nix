@@ -96,6 +96,8 @@ in {
       base16-colors = import ./base16.nix;
     };
 
+    notes.obsidian.enable = true;
+
     statusline.lualine.enable = true;
 
     ui.noice.enable = true;
