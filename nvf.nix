@@ -149,6 +149,12 @@ in {
       trouble.enable = true;
     };
 
+    formatter.conform-nvim.setupOpts.formatters.typstyle.prepend_args = [
+      "--wrap-text"
+      "--line-width"
+      "80"
+    ];
+
     autocomplete.blink-cmp = {
       enable = true;
       setupOpts.signature.enable = true;
