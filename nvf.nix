@@ -103,6 +103,11 @@ in {
     ui.noice.enable = true;
     visuals.nvim-web-devicons.enable = true;
 
+    lsp = {
+      presets.harper.enable = true;
+      servers.harper.filetypes = ["gitcommit" "latex" "markdown" "typst"];
+    };
+
     languages = {
       enableExtraDiagnostics = true;
       enableFormat = true;
