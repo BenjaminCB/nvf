@@ -124,6 +124,7 @@ in {
       python = {
         enable = true;
         lsp.enable = true;
+        format.enable = false;
         treesitter.enable = true;
       };
       markdown = {
