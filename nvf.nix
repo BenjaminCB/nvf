@@ -130,7 +130,8 @@ in {
       markdown = {
         enable = true;
         lsp.enable = true;
-        extensions.render-markdown-nvim.enable = true;
+        extensions.render-markdown-nvim.enable = false;
+        extensions.markview-nvim.enable = true;
       };
       yaml.enable = true;
       html.enable = true;
